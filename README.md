@@ -105,7 +105,7 @@
 - Super simple - under <code>pages</code> create an <code>api</code> folder
 -  File names and paths work just like pages do. However, instead of building components in those files, we'll create API handlers.
 -  Now let's create some API handlers to handle data for our Notes app. The handlers are based on Connect, which Express.
--  Api handlers are based on (Connect)[https://www.npmjs.com/package/connect] (Express)[https://expressjs.com/]
+-  Api handlers are based on [Connect](https://www.npmjs.com/package/connect) [Express](https://expressjs.com/)
 -  For service functions the api folder will be on the root, our api routes are not service functions and has nothing to do with Next.js (they just look the same)
 -  Connect is a framework that Express made popular, 4.0+ got rid of the dependency 
 - check api > index.js for syntax
@@ -125,7 +125,7 @@
 - On client side:
   - You can continue to fetch data client-side to react the same way you do now with Hooks, fetch etc ( just react nothing changed )
   - Next.js injects <code>fetch</code> into your environment, dont have to worry about axios, free global
-  - Checkout (swr)[https://swr.vercel.app/] (react-query)[https://react-query.tanstack.com/] for client side data fetching needs
+  - Checkout [swr](https://swr.vercel.app/) [react-query](https://react-query.tanstack.com/) for client side data fetching needs
 - Ahead of time:
   - Three different methods <code> getStaticPropbs getStaticPaths getServerSideProps</code>
 
