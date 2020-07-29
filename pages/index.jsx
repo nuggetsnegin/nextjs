@@ -1,6 +1,12 @@
 import React from 'react'
+import Link from 'next/link'
 
-const Page = () => <div>Notes page</div>
+export default () => (
+  <div>
+    <h1>Index page</h1>
 
-
-export default Page;
+    <Link href="/notes">
+      <a>Notes</a>
+    </Link>
+  </div> 
+)

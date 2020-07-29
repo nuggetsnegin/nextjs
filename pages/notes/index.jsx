@@ -1,7 +1,14 @@
-/* whenever you create a index in a folder for pages it is the index of that subpath*/
 import React from 'react'
+import Link from 'next/link'
 
-const Page = () => <div>Notes page</div>
 
+const Page = () => (
+  <div>
+    <h1>Notes Index Path</h1>
+    <Link href="/notes/[id]" as={`/notes/1`}>
+      <a>Note 1</a>
+    </Link>
+  </div>
+)
 
-export default Page;
+export default Page
