@@ -92,7 +92,7 @@
 - Note, when you add a config you have to rebuild: Found a change in next.config.js. Restart the server to see the changes in effect. 
 - [phases](https://github.com/vercel/next.js/blob/canary/packages/next/next-server/lib/constants.ts#L1-L4)
 #### PLUGINS
-- next.config.js file gives us ability to do some powerful stuff, because the config file has convention you should be able to use changes written by others. These are known as **Next.js plugins.**
+- <code>next.config.js</code> file gives us ability to do some powerful stuff, because the config file has convention you should be able to use changes written by others. These are known as **Next.js plugins.**
 - Most plugins follow the <code>withPluginName</code> format. They also **usually take your custom Next.js config**, if any, to ensure its returned and consumed by Next.js. This allows you to compose plugins:
  <code>const withPlugins = require('next-compose-plugins'); const withOffline = require('next-offline');</code>
 - You have to **return a config object inside the file**
