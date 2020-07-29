@@ -84,3 +84,8 @@
 - Instead we can use the theme in the app(root) to add providers
 - <code>/** @jsx jsx */</code> telling the compiler to use this @jsx compiler so we can use <code>sx</code> to get  inline styles and refer to theme variables!! 😍
 - **theme.ui** vs **tailwind** - theme.ui doesn't use class names, all generated for you and theme.ui is themeable (there's a tailwind theme!)
+
+
+### CONFIG 
+- If you want to change the build system's behavior, extend Next.js features or add ENV files etc. we create it in the root called <code>next.config.js</code>
+- merges the config to webpack (using webpack merge)
