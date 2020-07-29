@@ -1,6 +1,6 @@
 # NEXT.JS
 
-### INTRO NOTES:
+### INTRO
 
 - use nvm or n to switch between node versions 😨😨
 - think of React as a view library (i.e. you need a router, styling, build system) lot to do manually/decision making
