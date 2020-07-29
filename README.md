@@ -55,3 +55,4 @@
 - When it comes to styling we can have **global styles** and **component styles**. For global CSS you have to import them at the entry point of your app. Where is the entrance for Next.js app? It's actually created for you but you can have to create your own now that you want global styles.
 - The only way is a special page <code>pages/_app.jsx</code> (*note _ is reserved for hijacking the root*)
 - We then have to add a special component (check _app.jsx for code)
+- If you try to **import it anywhere else you will get a nice error telling you to put it into _app**
