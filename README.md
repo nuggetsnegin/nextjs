@@ -121,3 +121,21 @@
   - delete note => DELETE /api/note/:id
   - get one note => DELETE /api/note/:id
   - get all notes => DELETE /api/note/
+
+
+## FETCHING DATA
+- On client side:
+  - You can continue to fetch data client-side to react the same way you do now with Hooks, fetch etc ( just react nothing changed )
+  - Next.js injects <code>fetch</code> into your environment, dont have to worry about axios, free global
+  - Checkout (swr)[https://swr.vercel.app/]/(react-query)[https://react-query.tanstack.com/] for client side data fetching needs
+- Ahead of time:
+  - Three different methods <code> getStaticPropbs getStaticPaths getServerSideProps</code>
+
+### Static Data
+ - all the above methods are for **prerendering Pages** only. You cannot use them in components/client-side data fetching.
+ - remember every page is pre-rendered automatically but fetching data during that pre-render will require one of these methods
+ - <code>getStaticProps</code>
+   - <code>export async function getStaticProps</code>
+   - only going to be executed in a node environment (never in a browser, the function doesnt get bundled with the code/shipped with browser code)
+   - i.e. if you want to get content from a CMS you can make a call and **inject the results to the props**
+   - 
