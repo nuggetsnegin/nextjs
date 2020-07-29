@@ -111,3 +111,7 @@
 -  For service functions the api folder will be on the root, our api routes are not service functions and has nothing to do with Next.js (they just look the same)
 -  Connect is a framework that Express made popular, 4.0+ got rid of the dependency 
 - check api > index.js for syntax
+
+### API HANDLERS
+- Any middleare we use in Express we can use in Next (using next-connect)
+- Turn any handler into an Express like router
