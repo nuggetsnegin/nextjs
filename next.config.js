@@ -1,3 +1,13 @@
+const nextEnv = require('next-env')
+const dotenvLoad = require('dotenv-load')
+
+//injects the .env file for you
+dotenvLoad()
+
+//nextEnv plugin (creating it, with the env loaded into it), every variable with the value will be injected
+const withNextEnv = nextEnv()
+module.exports = withNextEnv()
+
 module.exports = {
   webpack: {
     // webpack config properties
