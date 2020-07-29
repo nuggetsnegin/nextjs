@@ -125,7 +125,7 @@
 - On client side:
   - You can continue to fetch data client-side to react the same way you do now with Hooks, fetch etc ( just react nothing changed )
   - Next.js injects <code>fetch</code> into your environment, dont have to worry about axios, free global
-  - Checkout (swr)[https://swr.vercel.app/]/(react-query)[https://react-query.tanstack.com/] for client side data fetching needs
+  - Checkout (swr)[https://swr.vercel.app/] (react-query)[https://react-query.tanstack.com/] for client side data fetching needs
 - Ahead of time:
   - Three different methods <code> getStaticPropbs getStaticPaths getServerSideProps</code>
 
