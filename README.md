@@ -18,3 +18,9 @@
 - Do you only need a single page app? Then use **CRA** (no server-side rendering, api routes)
 - Do you need a static site like a blog that's also a SPA? Use **Next.js or Gatsby**
 - Need SSR (server-side rendering), an API, and all the above? Use **Next.js**
+
+### SETUP
+- We have several scripts that we need to declare in package.json: 
+  - <code>next</code> Will start Next.js in dev mode with hot reloading.
+  - <code>next build</code> Will build your project and ready it for production.
+  - <code>next start</code> Will start your built app, used in production.
