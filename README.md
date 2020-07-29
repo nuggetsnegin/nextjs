@@ -1,4 +1,5 @@
 # NEXT.JS
+- Notes for the front-end masters course with Scott Moss!
 
 ## INTRO
 
@@ -154,7 +155,6 @@
 - Lastly we have <code>getServerSideProps</code> This will be called at runtime during every request. So unlike getStaticProps, you will have the runtime data like query params, HTTP headers, and the req and res objects from API handlers.
 - It's **always executed per request** while <code>getStaticProps</code> only happens once
   - i.e. rendering a user id on an ask
-  - 
 
 ### WHEN TO USE WHAT?
 - Do you need data at runtime but don't need SSR? Use client-side data fetching.
@@ -172,6 +172,21 @@
 
 - For client-side rendering, fetch your data inside your components. You can mix and match these rendering modes to have a genuinely hybrid app ✨.
 
+## WORKING WITH SSR
+- Sometimes you just need to skip rendering some component on the server because:
+  - it depends on the DOM API
+  - it depends on client-side data
+  - something else
+Next.js supports dynamic imports that, when used with components, will opt out of SSR.
 
-
-
+## DEPLOYMENT
+- Depending on how you build your app will determine where you can deploy to.
+- By default, a Next.js app has to be deployed to an environment that supports Node.js. So that's pretty much everywhere expect static hosting services like netlify (not easily anyway).
+- 👍🏾   tip: You should deploy to vercel. Vercel literally made Next.js.
+- If you export your app to be pure static (no need for Node), you can deploy to static hosting services. You can use: next export
+- To do that. There are some gotchas, though.
+- ⚠️ warning: Besure to change the hardcoded API URLS in the fetch calls to use and ENV var for the live URLS.
+  - We're going to deploy to Vercel. It's actually pretty easy. Install the CLI npm npm i -g vercel
+  -yarn yarn global add vercel
+  - In your project, run: vercel 
+- That's it! If your project is already on Github, you can deploy that way from vercel as well. Create an account and connect your Github account.
