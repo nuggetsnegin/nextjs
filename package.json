@@ -8,6 +8,7 @@
     "@theme-ui/presets": "^0.3.0",
     "body-parser": "^1.19.0",
     "dotenv-load": "^2.0.0",
+    "eslint": "^7.5.0",
     "next": "^9.5.0",
     "next-connect": "^0.8.1",
     "next-env": "^1.1.1",
@@ -16,9 +17,9 @@
     "theme-ui": "^0.3.1"
   },
   "scripts": {
-  "dev": "next",
-  "build": "next build",
-  "start": "next start"
-},
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
   "devDependencies": {}
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 
-const Page = () => {
-    <div>Index Page</div>
-}
+const Page = () => <div>Notes page</div>
+
 
 export default Page;
