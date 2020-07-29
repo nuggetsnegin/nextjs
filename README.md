@@ -39,9 +39,9 @@
               index.jsx
   </code>
 - By adding an <code>index</code> in a folder, we're telling Next.js that we want this component to be the **index route** for this path. So in this case, navigating to <code> /notes </code> will render <code> pages/notes/index.jsx</code>
-- 
+  
 #### DYNAMIC ROUTING
-- Next.js makes it easy to create **dynamic routes**. Depending on if an dhow you want those pages to be **prerendered** will determine how you set them up. We're going to focus on creating dynamic routes that will not be built at build time but rather run time on the server.
+- Next.js makes it easy to create **dynamic routes**. Depending on if and how you want those pages to be **prerendered** will determine how you set them up. We're going to focus on creating dynamic routes that will not be built at build time but rather run time on the server.
 - So to create a dynamic route, we can create a file that looks like this: <code>id.jsx</code>
 - Where <code>id</code> is the name of the parameter. You can name it whatever you want. Those brackets are not a typoe or placeholder - that's the syntax to create dynamic route using file name conventions.
 - We can access the <code>id</code> param inside our page component using <code>useRouter</code> hook from <code>next/route</code> module. This comes for free with Next.js :D
@@ -49,3 +49,9 @@
 
 ##### CATCH-ALL ROUTES
 - There's a beautiful feature in Next.js that allows us to define catch-all routes for when we're too lazy to make a page for each one.
+
+
+### STYLING
+- When it comes to styling we can have **global styles** and **component styles**. For global CSS you have to import them at the entry point of your app. Where is the entrance for Next.js app? It's actually created for you but you can have to create your own now that you want global styles.
+- The only way is a special page <code>pages/_app.jsx</code> (*note _ is reserved for hijacking the root*)
+- We then have to add a special component (check _app.jsx for code)
