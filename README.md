@@ -136,4 +136,15 @@
    - <code>export async function getStaticProps</code>
    - only going to be executed in a node environment (never in a browser, the function doesnt get bundled with the code/shipped with browser code)
    - i.e. if you want to get content from a CMS you can make a call and **inject the results to the props**
-   - 
+   - By having your page export getStaticPros, Next.js will run this function at build time. Whatever your return as props will be passed into the exported page.
+   - The results of this function are saved into a JSON file and passed as props to the client's component at runtime.
+   - This function and all other data fetching functions will only ever run on the server. The actual code won't even be bundled with the client code. That means you can do some exciting things here:
+    - file system work
+    - connect to a DB
+    - crawl a website? Yup.
+- <code>getStaticPaths</code>
+  - similar to getStaticProps but fetches all the generated paths for all your URLS
+  - 
+
+
+
