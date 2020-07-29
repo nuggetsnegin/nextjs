@@ -75,3 +75,8 @@
 
 #### CSS MODULES
 - All you have to do is add 'module' to the file name. i.e. style.css --> style.module.css
+
+#### THEME.UI
+- Create an object representing a theme and use that theme for all your components!
+- A lot simpler to style than anything Scott has ever used :O
+- Use <code> npm i theme-ui @theme-ui/presets --save</code> presets lets you use reset, tailwindcss whatever we want
