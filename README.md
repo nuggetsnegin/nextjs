@@ -1,5 +1,5 @@
 # NEXT.JS
-- Notes for the front-end masters course with Scott Moss!
+- Notes for the [frontendmasters](https://frontendmasters.com/) Next.js workshop with Scott Moss!
 
 ## INTRO
 
