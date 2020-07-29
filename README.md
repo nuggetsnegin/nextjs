@@ -83,3 +83,4 @@
 - Theme.ui has a provider, every page in Next.js is it's own app/code splitting (for free!), every page we can use a provider but that's annoying 😅
 - Instead we can use the theme in the app(root) to add providers
 - <code>/** @jsx jsx */</code> telling the compiler to use this @jsx compiler so we can use <code>sx</code> to get  inline styles and refer to theme variables!! 😍
+- **theme.ui** vs **tailwind** - theme.ui doesn't use class names, all generated for you and theme.ui is themeable (there's a tailwind theme!)
