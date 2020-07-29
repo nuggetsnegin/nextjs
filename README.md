@@ -28,3 +28,24 @@
 ### ROUTING WITH NEXT.JS
 - Don't need to interact with a router directly to create pages. Next.js has built on conventions to make creating routes as easy as creating a file. :D
 - To get started create a directory called <code>/pages</code>. Next.js will associate any file in this directory as a route. The file names determine the route name or pattern.
+- To create paths like <code>/project/settings</code> we can use folders in our <code>/pages</code> directory. For our note app we need the following routes:
+  <code> index => /
+  all notes => /notes
+  one note => /notes/:id
+  </code>
+- We already create the index route so lets make a ntoes route 
+  <code> pages
+            notes
+              index.jsx
+  </code>
+- By adding an <code>index</code> in a folder, we're telling Next.js that we want this component to be the **index route** for this path. So in this case, navigating to <code> /notes </code> will render <code> pages/notes/index.jsx</code>
+- 
+#### DYNAMIC ROUTING
+- Next.js makes it easy to create **dynamic routes**. Depending on if an dhow you want those pages to be **prerendered** will determine how you set them up. We're going to focus on creating dynamic routes that will not be built at build time but rather run time on the server.
+- So to create a dynamic route, we can create a file that looks like this: <code>id.jsx</code>
+- Where <code>id</code> is the name of the parameter. You can name it whatever you want. Those brackets are not a typoe or placeholder - that's the syntax to create dynamic route using file name conventions.
+- We can access the <code>id</code> param inside our page component using <code>useRouter</code> hook from <code>next/route</code> module. This comes for free with Next.js :D
+- The param name on the query object is the same name as the param name in the file for that page.
+
+##### CATCH-ALL ROUTES
+- There's a beautiful feature in Next.js that allows us to define catch-all routes for when we're too lazy to make a page for each one.
