@@ -49,6 +49,22 @@
 
 ##### CATCH-ALL ROUTES
 - There's a beautiful feature in Next.js that allows us to define catch-all routes for when we're too lazy to make a page for each one.
+- -What's catch-all route? Think of a global. <code>this/folder/**</code>
+- Where <code>**</code> means everything inside <code>folder</code>. We can do the same with our dynamic routes, all we need is to create a file in our pages directory like <code>docs/[...param].jsx</code>
+- So the ellipsis <code>...</code> is used in this example to say that this file will represent and route that matches <code>/docs/a</code> or <code>docs/a/b</code> or <code>docs/a/b/c/d/a/b</code> - you get the point. You can then access all the params the same way you do with a single route param the only different is the value will be an array of the params in order.
+- If you want to include the parent path in your catch-all route you can use an optional catch-all route <code>docs/[[...param]].jsx</code>
+- Just add another set of <code>[]</code> over your catch-all and now in <code>/docs</code> will be matched with all of its children. The params value of the <code>router.query</code> for the parent path will just be an empty object <code> {} </code>
+- When to use **catch-all routes?** **Useful when we have a bunch of pages that have pretty similar if not identical layouts and style but have different content and need their own URL** such things like docs or wikis are good examples
+
+##### NON-PAGES
+- Next.js has no conventions or opinions when we just need to use a component. The community usually creates a <code>/src/components</code> folder where all components live.
+
+### NAVIGATION
+- Next.js has a few tricks up its sleeve to help us navigate between pages
+
+#### LINK COMPONENT
+- Similar to an <code><a></code> tag, we can use <code>Link</code> component and then <code>next/link</code> module.
+
 
 
 ### STYLING
@@ -56,3 +72,6 @@
 - The only way is a special page <code>pages/_app.jsx</code> (*note _ is reserved for hijacking the root*)
 - We then have to add a special component (check _app.jsx for code)
 - If you try to **import it anywhere else you will get a nice error telling you to put it into _app**
+
+#### CSS MODULES
+- All you have to do is add 'module' to the file name. i.e. style.css --> style.module.css
