@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import Link from 'next/link'
+import dynamic from 'next/dynamic';
 
 export default () => (
   <div sx={{ height: `calc(100vh - 60px)`}}>
