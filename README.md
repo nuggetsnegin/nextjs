@@ -89,3 +89,5 @@
 ### CONFIG 
 - If you want to change the build system's behavior, extend Next.js features or add ENV files etc. we create it in the root called <code>next.config.js</code>
 - merges the config to webpack (using webpack merge)
+- Note, when you add a config you have to rebuild: Found a change in next.config.js. Restart the server to see the changes in effect. 
+- [https://github.com/vercel/next.js/blob/canary/packages/next/next-server/lib/constants.ts#L1-L4](phases)
