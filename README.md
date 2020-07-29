@@ -24,3 +24,7 @@
   - <code>next</code> Will start Next.js in dev mode with hot reloading.
   - <code>next build</code> Will build your project and ready it for production.
   - <code>next start</code> Will start your built app, used in production.
+
+### ROUTING WITH NEXT.JS
+- Don't need to interact with a router directly to create pages. Next.js has built on conventions to make creating routes as easy as creating a file. :D
+- To get started create a directory called <code>/pages</code>. Next.js will associate any file in this directory as a route. The file names determine the route name or pattern.
