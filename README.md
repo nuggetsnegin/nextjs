@@ -129,7 +129,7 @@
 - Ahead of time:
   - Three different methods <code> getStaticPropbs getStaticPaths getServerSideProps</code>
 
-### Static Data
+### STATIC DATA
  - all the above methods are for **prerendering Pages** only. You cannot use them in components/client-side data fetching.
  - remember every page is pre-rendered automatically but fetching data during that pre-render will require one of these methods
  - <code>getStaticProps</code>
@@ -142,9 +142,30 @@
     - file system work
     - connect to a DB
     - crawl a website? Yup.
+### STATIC PATHS
 - <code>getStaticPaths</code>
   - similar to getStaticProps but fetches all the generated paths for all your URLS
+  - The context object is useful when the page is dynamic. The context will contain the value of the params. This function is not run at runtime in the browser, so where do the params come in?
+  - That's where <code>getStaticPaths</code> come in
+  - paths & props are used together - if it's not a dynamic url you don't need getStaticPaths
+    - If a page has a dynamic path [id].jsx and uses getStaticProps, it must also use getStaticPaths to prerender all the pages at build time into HTML.
+  - if you add <code>fallback=true</code> to static paths, if you're trying to grab 1000 blog posts but only want to render 100 at a time, you can use fallback=true if you dont want to statically prerender all items at once and render some later at runtime via SSR
+
+### SERVER DATA
+- Lastly we have <code>getServerSideProps</code> This will be called at runtime during every request. So unlike getStaticProps, you will have the runtime data like query params, HTTP headers, and the req and res objects from API handlers.
+- It's **always executed per request** while <code>getStaticProps</code> only happens once
+  - i.e. rendering a user id on an ask
   - 
+
+### WHEN TO USE WHAT?
+- Do you need data at runtime but don't need SSR? Use client-side data fetching.
+- Do you need data at runtime but do need SSR? Use <code>getServerSideProps</code>
+- Do you have pages that rely on data that is cachable and accessible at build time? Like from a CMS? Use <code>getStaticProps</code>
+- Do you have the same as above but the pages have dynamic URL params? Use <code>getStaticProps and getStaticPaths</code>
+
+
+
+
 
 
 
