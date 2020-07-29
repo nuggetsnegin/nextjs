@@ -3,7 +3,8 @@ import { roboto } from '@theme-ui/presets'
 const theme = {
   ...roboto,
   containers: {
-    card: {
+      card: {
+      //defining things we can use
       boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
       border: '1px solid',
       borderColor: 'muted',
@@ -16,10 +17,13 @@ const theme = {
       m: 0,
       mx: 'auto',
     }
-  },
+    },
+  //global styles
   styles: {
     ...roboto.styles
   }
 }
+
+console.log(theme)
 
 export default theme
