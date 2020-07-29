@@ -1,6 +1,5 @@
 import nc from 'next-connect'
 import notes from '../../../src/data/data'
-
 const handler = nc()
     .post((req, res) => {
         const note = {

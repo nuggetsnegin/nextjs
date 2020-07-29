@@ -1,12 +1,11 @@
 import nc from 'next-connect'
-import notes from '../../../src/data/data'
+import notes from '../../../src/components/data/data'
 
 const getNote = id => notes.find(n => n.id === parseInt(id))
 
 const handler = nc()
   .get((req, res) => {
     
-      //same thing as const { id } = query.id seen in pages
     const note = getNote(req.query.id)
 
     if (!note) {
