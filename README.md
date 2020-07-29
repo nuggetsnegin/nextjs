@@ -49,7 +49,7 @@
 
 ### CATCH-ALL ROUTES
 - There's a beautiful feature in Next.js that allows us to define catch-all routes for when we're too lazy to make a page for each one.
-- -What's catch-all route? Think of a global. <code>this/folder/**</code>
+- What's catch-all route? Think of a global. <code>this/folder/**</code>
 - Where <code>**</code> means everything inside <code>folder</code>. We can do the same with our dynamic routes, all we need is to create a file in our pages directory like <code>docs/[...param].jsx</code>
 - So the ellipsis <code>...</code> is used in this example to say that this file will represent and route that matches <code>/docs/a</code> or <code>docs/a/b</code> or <code>docs/a/b/c/d/a/b</code> - you get the point. You can then access all the params the same way you do with a single route param the only different is the value will be an array of the params in order.
 - If you want to include the parent path in your catch-all route you can use an optional catch-all route <code>docs/[[...param]].jsx</code>
