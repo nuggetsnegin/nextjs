@@ -63,7 +63,7 @@
 - Next.js has a few tricks up its sleeve to help us navigate between pages
 
 ### LINK COMPONENT
-- Similar to an <code><a></code> tag, we can use <code>Link</code> component and then <code>next/link</code> module.
+- Similar to an <code> < a > </code> tag, we can use <code>Link</code> component and then <code>next/link</code> module.
 
 ## STYLING
 - When it comes to styling we can have **global styles** and **component styles**. For global CSS you have to import them at the entry point of your app. Where is the entrance for Next.js app? It's actually created for you but you can have to create your own now that you want global styles.
