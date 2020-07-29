@@ -15,6 +15,6 @@
 
 ### WHEN TO USE NEXT.JS?
 - Don't make a react app from scratch (takes forever, I know...) unless you use parcel 😅
-- Do you only need a single page app? Then use CRA (no server-side rendering, api routes)
-- Do you need a static site like a blog that's also a SPA? Use Next.js or Gatsby
+- Do you only need a single page app? Then use **CRA** (no server-side rendering, api routes)
+- Do you need a static site like a blog that's also a SPA? Use **Next.js or Gatsby**
 - Need SSR (server-side rendering), an API, and all the above? Use **Next.js**
