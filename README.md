@@ -115,3 +115,9 @@
 ### API HANDLERS
 - Any middleare we use in Express we can use in Next (using next-connect)
 - Turn any handler into an Express like router
+- We need some basic CRUD:
+  - create note => POST /api/note
+  - update note => PATCH /api/note/:id
+  - delete note => DELETE /api/note/:id
+  - get one note => DELETE /api/note/:id
+  - get all notes => DELETE /api/note/
